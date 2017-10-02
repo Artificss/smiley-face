@@ -3,11 +3,28 @@
     <head>
         <meta charset="utf-8">
         <title>Smiley Face by Artificss</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <div class="container">
-            <div class="face"></div>
+            <div class="face">
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="mouth"></div>
+            </div>
         </div>
+        <div class="group-action">
+            <div class="opener"></div>
+            <div class="group blink">
+                <button id="blink-left">Left</button>
+                <button id="blink-right">Right</button>
+                <button id="blink-both">Both</button>
+            </div>
+        </div>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
     </body>
 </html>

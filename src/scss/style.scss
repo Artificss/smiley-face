@@ -1,0 +1,109 @@
+$greyBold: #454545;
+$greyMain: #858585;
+$yellowMain: #E7E77A;
+
+$defaultTransition: all 0.2s linear;
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: $greyBold;
+}
+
+.container {
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    top: 50%;
+    left: 50%;
+    background: transparent;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    &.yellow {
+        background: $yellowMain;
+    }
+
+    .eye {
+        position: absolute;
+        width: 10%;
+        height: 10%;
+        top: 25%;
+        border-radius: 50%;
+        background: $greyMain;
+        transition: $defaultTransition;
+
+        &.left {
+            left: 25%;
+        }
+        &.right {
+            right: 25%;
+        }
+        &.blink {
+            height: 3%;
+            top: 30%;
+            border-radius: 500px;
+        }
+    }
+    .mouth {
+        position: absolute;
+        width: 40%;
+        height: 7.5%;
+        left: 50%;
+        top: 65%;
+        border-radius: 1000px;
+        background: $greyMain;
+        transform: translateX(-50%);
+        &.surprise {
+            width: 30%;
+            height: 30%;
+            top: 55%;
+            border-radius: 50%;
+        }
+    }
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 2px;
+    background: #3c6f88;
+    color: #fff;
+    box-shadow: 0px 3px 7px -2px $greyBold;
+    cursor: pointer;
+    outline: none;
+    transition: $defaultTransition;
+}
+
+.group-action {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 30px;
+    background: $greyMain;
+    overflow: auto;
+    box-shadow: 10px 0px 15px -6px $greyBold inset;
+    .group {
+        border: 1px solid $greyBold;
+        padding: 0 15px;
+    }
+}
