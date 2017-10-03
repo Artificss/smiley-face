@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html, body {
   position: relative;
@@ -7,7 +8,9 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #454545; }
+  background: #454545;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 .container {
   position: absolute;
@@ -17,45 +20,54 @@ html, body {
   left: 50%;
   background: transparent;
   text-align: center;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+}
 
 .face {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 50%; }
-  .face.yellow {
-    background: #E7E77A; }
-  .face .eye {
-    position: absolute;
-    width: 10%;
-    height: 10%;
-    top: 25%;
-    border-radius: 50%;
-    background: #858585;
-    transition: all 0.2s linear; }
-    .face .eye.left {
-      left: 25%; }
-    .face .eye.right {
-      right: 25%; }
-    .face .eye.blink {
-      height: 3%;
-      top: 30%;
-      border-radius: 500px; }
-  .face .mouth {
-    position: absolute;
-    width: 40%;
-    height: 7.5%;
-    left: 50%;
-    top: 65%;
-    border-radius: 1000px;
-    background: #858585;
-    transform: translateX(-50%); }
-    .face .mouth.surprise {
-      width: 30%;
-      height: 30%;
-      top: 55%;
-      border-radius: 50%; }
+  border-radius: 50%;
+}
+.face.yellow {
+  background: #E7E77A;
+}
+.face .eye {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  top: 25%;
+  border-radius: 50%;
+  background: #858585;
+  transition: all 0.1s linear;
+}
+.face .eye.left {
+  left: 25%;
+}
+.face .eye.right {
+  right: 25%;
+}
+.face .eye.blink {
+  height: 3%;
+  top: 30%;
+  border-radius: 500px;
+}
+.face .mouth {
+  position: absolute;
+  width: 40%;
+  height: 7.5%;
+  left: 50%;
+  top: 65%;
+  border-radius: 1000px;
+  background: #858585;
+  transform: translateX(-50%);
+}
+.face .mouth.surprise {
+  width: 30%;
+  height: 30%;
+  top: 55%;
+  border-radius: 50%;
+}
 
 button {
   display: block;
@@ -69,7 +81,8 @@ button {
   box-shadow: 0px 3px 7px -2px #454545;
   cursor: pointer;
   outline: none;
-  transition: all 0.2s linear; }
+  transition: all 0.1s linear;
+}
 
 .group-action {
   position: fixed;
@@ -78,9 +91,47 @@ button {
   top: 0;
   right: 0;
   padding: 30px;
-  background: #858585;
+  background: #e2e2e2;
   overflow: auto;
-  box-shadow: 10px 0px 15px -6px #454545 inset; }
-  .group-action .group {
-    border: 1px solid #454545;
-    padding: 0 15px; }
+  box-shadow: 10px 0px 15px -6px #454545 inset;
+}
+.group-action .group {
+  border-left: 1px solid #454545;
+  padding: 0 15px;
+}
+.group-action .group .action {
+  position: relative;
+}
+.group-action .group .action .options {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  visibility: hidden;
+  opacity: 0;
+  background: #e2e2e2;
+  box-shadow: 0px 3px 7px -2px #454545;
+  transition: all 0.2s linear;
+}
+.group-action .group .action .options.on {
+  top: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.chk-option {
+  display: block;
+}
+.chk-option input[type=checkbox] {
+  display: none;
+}
+.chk-option .view {
+  display: block;
+}
+.chk-option .view .chk {
+  display: inline-block;
+}
+.chk-option .view .label {
+  display: inline-block;
+}

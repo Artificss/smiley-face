@@ -1,8 +1,9 @@
 $greyBold: #454545;
 $greyMain: #858585;
+$greyLight: #e2e2e2;
 $yellowMain: #E7E77A;
 
-$defaultTransition: all 0.2s linear;
+$defaultTransition: all 0.1s linear;
 
 * {
     box-sizing: border-box;
@@ -15,6 +16,7 @@ html, body {
     margin: 0;
     padding: 0;
     background: $greyBold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .container {
@@ -99,11 +101,47 @@ button {
     top: 0;
     right: 0;
     padding: 30px;
-    background: $greyMain;
+    background: $greyLight;
     overflow: auto;
     box-shadow: 10px 0px 15px -6px $greyBold inset;
     .group {
-        border: 1px solid $greyBold;
+        border-left: 1px solid $greyBold;
         padding: 0 15px;
+        .action{
+            position: relative;
+            .options{
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                padding: 10px;
+                visibility: hidden;
+                opacity: 0;
+                background: $greyLight;
+                box-shadow: 0px 3px 7px -2px $greyBold;
+                transition: all 0.2s linear;
+                &.on{
+                    top: 100%;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.chk-option{
+    display: block;
+    input[type=checkbox]{
+        display: none;
+    }
+    label{
+        display: block;
+        .chk{
+            display: inline-block;
+        }
+        .label{
+            display: inline-block;
+        }
     }
 }

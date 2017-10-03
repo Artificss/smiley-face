@@ -13,12 +13,33 @@
                 <div class="mouth"></div>
             </div>
         </div>
+
+
         <div class="group-action">
             <div class="opener"></div>
-            <div class="group blink">
-                <button id="blink-left">Left</button>
-                <button id="blink-right">Right</button>
-                <button id="blink-both">Both</button>
+            <div class="group">
+                <div class="title">Eyes</div>
+                <div class="action">
+                    <button id="blink-left" class="has-option" data-for="optionsEyeBlink" data-target=".eye">Blink</button>
+                    <div class="options" id="optionsEyeBlink">
+                        <div class="chk-option">
+                            <input type="checkbox" class="rdo" data-target=".left">
+                            <label>
+                                <div class="chk"></div>
+                                <div class="label">Left</div>
+                            </label>
+                        </div>
+                        <label>
+                            <input type="checkbox" class="rdo" data-target=".right">
+                            <div class="view">
+                                <div class="chk"></div>
+                                <div class="label">Right</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <button id="blink-right">Dead</button>
+                <!-- <button id="blink-both">Both</button> -->
             </div>
         </div>
         <script
