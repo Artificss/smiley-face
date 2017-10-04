@@ -2,6 +2,7 @@ $greyBold: #454545;
 $greyMain: #858585;
 $greyLight: #e2e2e2;
 $yellowMain: #E7E77A;
+$blueMain: #1297D4;
 
 $defaultTransition: all 0.1s linear;
 
@@ -107,9 +108,9 @@ button {
     .group {
         border-left: 1px solid $greyBold;
         padding: 0 15px;
-        .action{
+        .actions {
             position: relative;
-            .options{
+            .options {
                 position: absolute;
                 width: 100%;
                 top: 0;
@@ -133,15 +134,11 @@ button {
 .chk-option{
     display: block;
     input[type=checkbox]{
-        display: none;
+        &:checked + label{
+            color: $blueMain;
+        }
     }
     label{
-        display: block;
-        .chk{
-            display: inline-block;
-        }
-        .label{
-            display: inline-block;
-        }
+        display: inline-block;
     }
 }

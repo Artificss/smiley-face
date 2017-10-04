@@ -19,23 +19,19 @@
             <div class="opener"></div>
             <div class="group">
                 <div class="title">Eyes</div>
-                <div class="action">
-                    <button id="blink-left" class="has-option" data-for="optionsEyeBlink" data-target=".eye">Blink</button>
-                    <div class="options" id="optionsEyeBlink">
-                        <div class="chk-option">
-                            <input type="checkbox" class="rdo" data-target=".left">
-                            <label>
-                                <div class="chk"></div>
-                                <div class="label">Left</div>
-                            </label>
-                        </div>
-                        <label>
-                            <input type="checkbox" class="rdo" data-target=".right">
-                            <div class="view">
-                                <div class="chk"></div>
-                                <div class="label">Right</div>
+                <div class="actions">
+                    <div class="action">
+                        <button id="eye-blink" class="has-option" data-for="optionsEyeBlink" data-target=".eye">Blink</button>
+                        <div class="options" id="optionsEyeBlink">
+                            <div class="chk-option">
+                                <input type="checkbox" id="optionEyeBlinkLeft" class="option" data-target=".eye.left" data-value="blink">
+                                <label for="optionEyeBlinkLeft">Left</label>
                             </div>
-                        </label>
+                            <div class="chk-option">
+                                <input type="checkbox" id="optionEyeBlinkRight" class="option" data-target=".eye.right" data-value="blink">
+                                <label for="optionEyeBlinkRight">Right</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <button id="blink-right">Dead</button>
