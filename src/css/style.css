@@ -33,7 +33,7 @@ html, body {
     height: 10%;
     top: 25%;
     border-radius: 50%;
-    background: #858585;
+    background: #afafaf;
     transition: all 0.1s linear; }
     .face .eye.left {
       left: 25%; }
@@ -43,6 +43,20 @@ html, body {
       height: 3%;
       top: 30%;
       border-radius: 500px; }
+    .face .eye.dead {
+      visibility: hidden; }
+      .face .eye.dead:before, .face .eye.dead:after {
+        content: '\00a0';
+        position: absolute;
+        width: 30%;
+        height: 100%;
+        visibility: visible;
+        background: #afafaf;
+        border-radius: 1000px; }
+      .face .eye.dead:before {
+        transform: rotate(45deg); }
+      .face .eye.dead:after {
+        transform: rotate(135deg); }
   .face .mouth {
     position: absolute;
     width: 40%;
@@ -50,7 +64,7 @@ html, body {
     left: 50%;
     top: 65%;
     border-radius: 1000px;
-    background: #858585;
+    background: #afafaf;
     transform: translateX(-50%); }
     .face .mouth.surprise {
       width: 30%;
@@ -83,6 +97,7 @@ button {
   overflow: auto;
   box-shadow: 10px 0px 15px -6px #454545 inset; }
   .group-action .group {
+    margin-bottom: 25px;
     border-left: 1px solid #454545;
     padding: 0 15px; }
     .group-action .group .actions {
@@ -97,7 +112,8 @@ button {
         opacity: 0;
         background: #e2e2e2;
         box-shadow: 0px 3px 7px -2px #454545;
-        transition: all 0.2s linear; }
+        transition: all 0.2s linear;
+        z-index: 1; }
         .group-action .group .actions .options.on {
           top: 100%;
           visibility: visible;

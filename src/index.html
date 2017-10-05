@@ -16,7 +16,20 @@
 
 
         <div class="group-action">
-            <div class="opener"></div>
+            <div class="group">
+                <div class="title">Face</div>
+                <div class="actions">
+                    <div class="action">
+                        <button id="face-color" class="has-option" data-for="optionsFacebColor" data-target=".face">Color</button>
+                        <div class="options" id="optionsFacebColor">
+                            <div class="chk-option">
+                                <input type="checkbox" id="optionFaceColorYellow" class="option" data-target=".face" data-value="yellow">
+                                <label for="optionFaceColorYellow">Yellow</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="group">
                 <div class="title">Eyes</div>
                 <div class="actions">
@@ -34,8 +47,21 @@
                         </div>
                     </div>
                 </div>
-                <button id="blink-right">Dead</button>
-                <!-- <button id="blink-both">Both</button> -->
+                <div class="actions">
+                    <div class="action">
+                        <button id="eye-dead" class="has-option" data-for="optionsEyeDead" data-target=".eye">Dead</button>
+                        <div class="options" id="optionsEyeDead">
+                            <div class="chk-option">
+                                <input type="checkbox" id="optionEyeDeadLeft" class="option" data-target=".eye.left" data-value="dead">
+                                <label for="optionEyeDeadLeft">Left</label>
+                            </div>
+                            <div class="chk-option">
+                                <input type="checkbox" id="optionEyeDeadkRight" class="option" data-target=".eye.right" data-value="dead">
+                                <label for="optionEyeDeadkRight">Right</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script
